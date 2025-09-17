@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+/* color theme website  */
+/* https://colorhunt.co/palette/3a0519670d2fa53860ef88ad */
+.bg-primary {
+  background-color: #670D2F !important;
+}
+
+.bg-secondary {
+  background-color: #EF88AD;
+}
+
+.bg-ternary {
+  background-color: #fdf2f8;
+}
+
+.text-primary {
+  color: #fdf2f8;
+}
+
+.text-secondary {
+  color: #670D2F;
+}
+
+.text-ternery {
+  color: #dd1562;
+}
+
+.border-primary {
+  border: solid 1px #670D2F;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  /* Equivalent to Tailwind's gap-4 */
+}
+
+@media (min-width: 768px) {
+  .custom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 756px) {
+  .mobile-flex {
+    flex-direction: column;
+  }
+}

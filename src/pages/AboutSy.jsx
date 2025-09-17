@@ -1,0 +1,43 @@
+import React, { useEffect } from 'react'
+import { InfoImage, Paragraph, Title } from '../shared';
+import { useLanguage } from '../context/languageContext';
+import syInformation from '../json/syInformation';
+
+
+const AboutSy = () => {
+  const { language } = useLanguage();
+  const info = language === 'mar' ? syInformation.sahajYogaInfoMar : syInformation.sahajYogaInfoEng;
+
+  useEffect(() => {
+    window.document.title = 'About Sahajyoga'
+  }, [])
+
+  return (
+    <>
+
+      <div id={document.title} className='p-4'>
+        {info.map((item, i) => (
+          <div
+            key={i}
+            className={`flex items-center justify-between mb-10 mobile-flex ${i % 2 !== 0 ? 'flex-row-reverse' : null}`}
+          >
+            <div className="w-full lg:w-1/2">
+              {item.heading.length >= 1 && (<Title customStyle={''} titleName={item.heading} devider={true} />)}
+              {item.info.length >= 1 && (<Paragraph paragraphItem={item.info} customStyle={'px-2'} />)}
+            </div>
+
+            <div className="w-full lg:w-1/2 h-full">
+              {item.img.length >= 1 && (
+                <InfoImage imgSrc={item.img} />
+              )}
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </>
+  );
+};
+
+
+export default AboutSy
