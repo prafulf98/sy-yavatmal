@@ -7,7 +7,7 @@ const donationItem =
     },
     {
       label: "Bank",
-      value: "State Bank Of India Datta Chowk Shakha, Yavatmal 445001"
+      value: "State Bank Of India, Datta Chowk, Yavatmal 445001"
     },
     {
       label: "Savings Account No",
@@ -21,7 +21,7 @@ const donationItem =
   contactPerson: [
     {
       label: "Contact Person",
-      value: "Brig. Rushikesh Koychade"
+      value: "Mr. Rushikesh Koychade"
     },
     {
       label: "Contact Number",
@@ -46,5 +46,6 @@ export default donationItem;
 // Account Name: H.H Shree Mataji Nirmala Devi Sahajayoga Trust Yavatmal 
 
 // Account No. 35120804121
+
 
 // IFSC code: SBIN0006332
